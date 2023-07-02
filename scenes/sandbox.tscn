@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://bdvn6h14f8a6v"]
+[gd_scene load_steps=3 format=3 uid="uid://bdvn6h14f8a6v"]
+
+[ext_resource type="PackedScene" uid="uid://bar1huk7ra4ls" path="res://scenes/environment/floors/level_1_floor.blend" id="1_c7vwv"]
+[ext_resource type="PackedScene" uid="uid://d0byia04yeqh0" path="res://scenes/characters/character_base.tscn" id="2_is75o"]
 
 [node name="Sandbox" type="Node3D"]
+
+[node name="level_1_floor" parent="." instance=ExtResource("1_c7vwv")]
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("2_is75o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.72665, 0, -0.750319)
