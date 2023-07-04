@@ -23,6 +23,10 @@ settings/stdout/print_fps=true
 
 project/assembly_name="KennyJam_Dungeon"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/behavior_tree/plugin.cfg")
+
 [input]
 
 forward={

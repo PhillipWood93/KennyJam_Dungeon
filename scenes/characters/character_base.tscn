@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://d0byia04yeqh0"]
+[gd_scene load_steps=24 format=3 uid="uid://d0byia04yeqh0"]
 
 [ext_resource type="ArrayMesh" uid="uid://cd44xoijfk4gg" path="res://assets/meshes/characters/human/character-human_mesh.res" id="1_m6l36"]
 [ext_resource type="Script" path="res://scripts/character_base.gd" id="1_r4m7y"]
@@ -17,7 +17,7 @@ resource_name = "RESET"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("body:position")
+tracks/0/path = NodePath("Pivot/body:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -29,7 +29,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("body:rotation")
+tracks/1/path = NodePath("Pivot/body:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -41,7 +41,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("body:scale")
+tracks/2/path = NodePath("Pivot/body:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -53,7 +53,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("body/arm-left:position")
+tracks/3/path = NodePath("Pivot/body/arm-left:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -65,7 +65,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("body/arm-left:rotation")
+tracks/4/path = NodePath("Pivot/body/arm-left:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -77,7 +77,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("body/arm-left:scale")
+tracks/5/path = NodePath("Pivot/body/arm-left:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -89,7 +89,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("body/arm-right:position")
+tracks/6/path = NodePath("Pivot/body/arm-right:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -101,7 +101,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("body/arm-right:rotation")
+tracks/7/path = NodePath("Pivot/body/arm-right:rotation")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -113,7 +113,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("body/arm-right:scale")
+tracks/8/path = NodePath("Pivot/body/arm-right:scale")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -125,7 +125,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("body/leg-left:position")
+tracks/9/path = NodePath("Pivot/body/leg-left:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -137,7 +137,7 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("body/leg-left:rotation")
+tracks/10/path = NodePath("Pivot/body/leg-left:rotation")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -149,7 +149,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("body/leg-left:scale")
+tracks/11/path = NodePath("Pivot/body/leg-left:scale")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -161,7 +161,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("body/leg-right:position")
+tracks/12/path = NodePath("Pivot/body/leg-right:position")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -173,7 +173,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("body/leg-right:rotation")
+tracks/13/path = NodePath("Pivot/body/leg-right:rotation")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -185,7 +185,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("body/leg-right:scale")
+tracks/14/path = NodePath("Pivot/body/leg-right:scale")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -197,7 +197,7 @@ tracks/14/keys = {
 tracks/15/type = "value"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("body/head:position")
+tracks/15/path = NodePath("Pivot/body/head:position")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
@@ -209,7 +209,7 @@ tracks/15/keys = {
 tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("body/head:rotation")
+tracks/16/path = NodePath("Pivot/body/head:rotation")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
@@ -221,7 +221,7 @@ tracks/16/keys = {
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("body/head:scale")
+tracks/17/path = NodePath("Pivot/body/head:scale")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
@@ -237,7 +237,7 @@ length = 0.7
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("body/arm-right:rotation")
+tracks/0/path = NodePath("Pivot/body/arm-right:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -246,13 +246,37 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector3(0, -0.399454, -0.523599), Vector3(0, 0, -0.523599), Vector3(0, 1.309, -0.523599), Vector3(0, 0, -0.523599)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pivot/body/arm-left:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0.523599)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pivot/body/head:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -0.349066, 0), Vector3(0, 0.261799, 0), Vector3(0, 5.96047e-08, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_287xh"]
 resource_name = "death"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("body:position")
+tracks/0/path = NodePath("Pivot/body:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -264,7 +288,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("body:rotation")
+tracks/1/path = NodePath("Pivot/body:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -276,7 +300,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("body/arm-left:position")
+tracks/2/path = NodePath("Pivot/body/arm-left:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -288,7 +312,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("body/arm-left:rotation")
+tracks/3/path = NodePath("Pivot/body/arm-left:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -300,7 +324,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("body/arm-right:position")
+tracks/4/path = NodePath("Pivot/body/arm-right:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -312,7 +336,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("body/arm-right:rotation")
+tracks/5/path = NodePath("Pivot/body/arm-right:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -324,7 +348,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("body/leg-left:position")
+tracks/6/path = NodePath("Pivot/body/leg-left:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -336,7 +360,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("body/leg-left:rotation")
+tracks/7/path = NodePath("Pivot/body/leg-left:rotation")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -348,7 +372,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("body/leg-right:position")
+tracks/8/path = NodePath("Pivot/body/leg-right:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -360,7 +384,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("body/leg-right:rotation")
+tracks/9/path = NodePath("Pivot/body/leg-right:rotation")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -372,7 +396,7 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("body/head:position")
+tracks/10/path = NodePath("Pivot/body/head:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -384,7 +408,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("body/head:rotation")
+tracks/11/path = NodePath("Pivot/body/head:rotation")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -401,7 +425,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("body/arm-left:rotation")
+tracks/0/path = NodePath("Pivot/body/arm-left:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -413,7 +437,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("body/arm-right:rotation")
+tracks/1/path = NodePath("Pivot/body/arm-right:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -425,7 +449,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("body/head:rotation")
+tracks/2/path = NodePath("Pivot/body/head:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -441,7 +465,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("body/head:rotation")
+tracks/0/path = NodePath("Pivot/body/head:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -453,7 +477,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("body/leg-right:rotation")
+tracks/1/path = NodePath("Pivot/body/leg-right:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -465,7 +489,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("body/leg-left:rotation")
+tracks/2/path = NodePath("Pivot/body/leg-left:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -477,7 +501,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("body/arm-right:rotation")
+tracks/3/path = NodePath("Pivot/body/arm-right:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -489,7 +513,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("body/arm-left:rotation")
+tracks/4/path = NodePath("Pivot/body/arm-left:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -508,10 +532,35 @@ _data = {
 "walk": SubResource("Animation_kpvx7")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2mpev"]
+animation = &"attack"
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_ig454"]
+input_0/name = "true"
+input_0/auto_advance = false
+input_0/reset = true
+input_1/name = "false"
+input_1/auto_advance = false
+input_1/reset = true
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ykptm"]
+animation = &"death"
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_ccndb"]
+input_0/name = "true"
+input_0/auto_advance = false
+input_0/reset = true
+input_1/name = "false"
+input_1/auto_advance = false
+input_1/reset = true
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rvy18"]
 animation = &"idle"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_thmnj"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kfdew"]
 animation = &"walk"
 
 [sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_djgfi"]
@@ -519,44 +568,56 @@ blend_point_0/node = SubResource("AnimationNodeAnimation_rvy18")
 blend_point_0/pos = 0.0
 blend_point_1/node = SubResource("AnimationNodeAnimation_thmnj")
 blend_point_1/pos = 1.0
-min_space = 0.0
+blend_point_2/node = SubResource("AnimationNodeAnimation_kfdew")
+blend_point_2/pos = -1.0
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_uxm6v"]
-graph_offset = Vector2(-464.15, 29.0391)
+graph_offset = Vector2(-434.66, 57.4155)
+nodes/AttackAnim/node = SubResource("AnimationNodeAnimation_2mpev")
+nodes/AttackAnim/position = Vector2(-320, 200)
+nodes/AttackTransition/node = SubResource("AnimationNodeTransition_ig454")
+nodes/AttackTransition/position = Vector2(-120, 220)
+nodes/DeathAnim/node = SubResource("AnimationNodeAnimation_ykptm")
+nodes/DeathAnim/position = Vector2(-80, 80)
+nodes/DeathTransition/node = SubResource("AnimationNodeTransition_ccndb")
+nodes/DeathTransition/position = Vector2(120, 120)
 nodes/locomotion/node = SubResource("AnimationNodeBlendSpace1D_djgfi")
-nodes/locomotion/position = Vector2(-40, 100)
-node_connections = [&"output", 0, &"locomotion"]
+nodes/locomotion/position = Vector2(-320, 320)
+nodes/output/position = Vector2(380, 120)
+node_connections = [&"output", 0, &"DeathTransition", &"AttackTransition", 0, &"AttackAnim", &"AttackTransition", 1, &"locomotion", &"DeathTransition", 0, &"DeathAnim", &"DeathTransition", 1, &"AttackTransition"]
 
-[node name="CharacterBody3D" type="CharacterBody3D"]
+[node name="CharacterBase" type="CharacterBody3D"]
 script = ExtResource("1_r4m7y")
 
-[node name="body" type="MeshInstance3D" parent="."]
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="body" type="MeshInstance3D" parent="Pivot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.60956e-16, 0.17625, 0)
 mesh = ExtResource("1_m6l36")
 skeleton = NodePath("")
 
-[node name="arm-left" type="MeshInstance3D" parent="body"]
-transform = Transform3D(0.926638, -0.375954, 0, 0.375954, 0.926638, 0, 0, 0, 1, -0.0998968, 0.1115, -0.0115)
+[node name="arm-left" type="MeshInstance3D" parent="Pivot/body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0998968, 0.1115, -0.0115)
 mesh = ExtResource("2_tkqvt")
 skeleton = NodePath("")
 
-[node name="arm-right" type="MeshInstance3D" parent="body"]
-transform = Transform3D(0.926638, 0.375954, 0, -0.375954, 0.926638, 0, 0, 0, 1, 0.0998968, 0.1115, -0.0115)
+[node name="arm-right" type="MeshInstance3D" parent="Pivot/body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0998968, 0.1115, -0.0115)
 mesh = ExtResource("3_p4q6c")
 skeleton = NodePath("")
 
-[node name="leg-left" type="MeshInstance3D" parent="body"]
+[node name="leg-left" type="MeshInstance3D" parent="Pivot/body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.083571, 0, -2.88765e-15)
 mesh = ExtResource("4_sbhrw")
 skeleton = NodePath("")
 
-[node name="leg-right" type="MeshInstance3D" parent="body"]
+[node name="leg-right" type="MeshInstance3D" parent="Pivot/body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.083571, 0, 2.14172e-09)
 mesh = ExtResource("5_bwuqm")
 skeleton = NodePath("")
 
-[node name="head" type="MeshInstance3D" parent="body"]
-transform = Transform3D(1, 0, 0, 0, 0.999835, 0.018179, 0, -0.018179, 0.999835, -1.81969e-09, 0.167, -0.0263888)
+[node name="head" type="MeshInstance3D" parent="Pivot/body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.81969e-09, 0.167, -0.0263888)
 mesh = ExtResource("6_n2t2e")
 skeleton = NodePath("")
 
@@ -573,8 +634,13 @@ libraries = {
 tree_root = SubResource("AnimationNodeBlendTree_uxm6v")
 anim_player = NodePath("../AnimationPlayer")
 active = true
+parameters/AttackTransition/current_state = "false"
+parameters/AttackTransition/transition_request = ""
+parameters/AttackTransition/current_index = 1
+parameters/DeathTransition/current_state = "false"
+parameters/DeathTransition/transition_request = ""
+parameters/DeathTransition/current_index = 1
 parameters/locomotion/blend_position = 0.0
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
-path_desired_distance = 0.1
-target_desired_distance = 0.1
+path_desired_distance = 0.5
