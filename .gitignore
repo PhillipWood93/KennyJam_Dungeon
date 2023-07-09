@@ -1,6 +1,9 @@
 # Godot 4+ specific ignores
 .godot/
 
+#IDE
+KennyJam_Dungeon.sln
+
 #assets
 assets/
 icon.svg

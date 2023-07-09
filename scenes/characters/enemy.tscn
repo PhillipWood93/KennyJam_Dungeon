@@ -16,11 +16,9 @@ script = ExtResource("2_3cpj0")
 mesh = ExtResource("2_eoids")
 
 [node name="arm-left" parent="Pivot/body" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0998968, 0.1115, -0.0115)
 mesh = ExtResource("3_p865a")
 
 [node name="arm-right" parent="Pivot/body" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0998968, 0.1115, -0.0115)
 mesh = ExtResource("4_fvwa6")
 
 [node name="leg-left" parent="Pivot/body" index="2"]
@@ -30,5 +28,4 @@ mesh = ExtResource("5_h8upl")
 mesh = ExtResource("6_8q643")
 
 [node name="head" parent="Pivot/body" index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.81969e-09, 0.167, -0.0263888)
 mesh = ExtResource("7_ood0r")
