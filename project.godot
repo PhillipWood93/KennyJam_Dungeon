@@ -15,10 +15,6 @@ run/main_scene="res://scenes/sandbox.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://icon.svg"
 
-[debug]
-
-settings/stdout/print_fps=true
-
 [dotnet]
 
 project/assembly_name="KennyJam_Dungeon"

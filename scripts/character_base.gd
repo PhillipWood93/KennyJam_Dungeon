@@ -3,7 +3,8 @@ extends CharacterBody3D
 class_name CharacterBase
 
 const SPEED : float = 1
-const JUMP_VELOCITY = 4.5
+
+const ATTACK_RANGE : float = 5.0
 
 @onready var anim_tree : AnimationTree = $AnimationTree
 @onready var nav_agent : NavigationAgent3D = $NavigationAgent3D
@@ -34,5 +35,11 @@ func move_to_location(delta):
 	velocity = direction * SPEED
 	move_and_slide()
 
-func jump():
-		velocity.y = JUMP_VELOCITY
+func attack(target : CharacterBody3D):
+	var dist = target.position - position
+	if dist.z > ATTACK_RANGE :
+		var loc = Vector3(target.position.x, target.position.y, target.position.z + ATTACK_RANGE)
+		move_to_location(loc)
+	else:
+		anim_tree.set("parameters/AttackTransition/transition_request", true)
+		print("Attack")
