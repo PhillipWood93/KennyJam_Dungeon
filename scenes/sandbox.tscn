@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bdvn6h14f8a6v"]
+[gd_scene load_steps=7 format=3 uid="uid://bdvn6h14f8a6v"]
 
+[ext_resource type="Script" path="res://scripts/sandbox.cs" id="1_an71x"]
 [ext_resource type="PackedScene" uid="uid://bar1huk7ra4ls" path="res://scenes/environment/floors/level_1_floor.blend" id="1_c7vwv"]
 [ext_resource type="PackedScene" uid="uid://bae04q7c5nbe1" path="res://scenes/characters/player.tscn" id="2_tfmya"]
 [ext_resource type="PackedScene" uid="uid://620a76hf83kf" path="res://scenes/characters/enemy.tscn" id="3_dlqr0"]
@@ -16,6 +17,7 @@ agent_radius = 0.1
 [sub_resource type="Environment" id="Environment_ee64i"]
 
 [node name="Sandbox" type="Node3D"]
+script = ExtResource("1_an71x")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_7avat")

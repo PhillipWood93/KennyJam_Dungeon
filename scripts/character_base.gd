@@ -20,14 +20,13 @@ func _physics_process(delta):
 		velocity.y -= gravity * delta
 	
 	if !nav_agent.is_navigation_finished():
-		move_to_location(delta)
 		anim_tree.set("parameters/locomotion/blend_position", 1)
 	else:
 		velocity = Vector3.ZERO
 		anim_tree.set("parameters/locomotion/blend_position", 0)
 
 
-func move_to_location(delta):
+func move_to_location(target : Node3D):
 	var targetPos = nav_agent.get_next_path_position()
 	var direction = global_position.direction_to(targetPos)
 	mesh.look_at(targetPos)
@@ -36,10 +35,6 @@ func move_to_location(delta):
 	move_and_slide()
 
 func attack(target : CharacterBody3D):
-	var dist = target.position - position
-	if dist.z > ATTACK_RANGE :
-		var loc = Vector3(target.position.x, target.position.y, target.position.z + ATTACK_RANGE)
-		move_to_location(loc)
-	else:
-		anim_tree.set("parameters/AttackTransition/transition_request", true)
-		print("Attack")
+	anim_tree.set("parameters/AttackTransition/transition_request", true)
+	await anim_tree.animation_finished
+	anim_tree.set("parameters/AttackTransition/transition_request", false)
