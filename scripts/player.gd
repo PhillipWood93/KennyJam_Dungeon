@@ -6,7 +6,7 @@ var hitResult
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	super()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -27,15 +27,16 @@ func _physics_process(delta):
 		rayQuery.to = to
 		var space = get_world_3d().direct_space_state
 		var result = space.intersect_ray(rayQuery)
-		hitResult = result
-		nav_agent.target_position = result.position
+		if result.has("position"):
+			hitResult = result
+			navAgent.target_position = result.position
 	
 	if(hitResult == null): return
 	#if enemy and we are in range then attack
-	if(hitResult.collider.is_in_group("Enemies") && nav_agent.is_navigation_finished()):
+	if(hitResult.collider.is_in_group("Enemies") && navAgent.is_navigation_finished()):
 		attack(hitResult.collider)
 		#setting the hitResult null so we only attack once per click...
 		hitResult = null
-	elif !nav_agent.is_navigation_finished():
+	elif !navAgent.is_navigation_finished():
 		move_to_location(hitResult.collider)
 	#else move to enemy and attack

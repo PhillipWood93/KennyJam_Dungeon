@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://crvdjkuhlury8"]
+
+[ext_resource type="PackedScene" uid="uid://c2pld0n1nmmlp" path="res://scenes/environment/walls/blend files/wall-half.blend" id="1_frf0d"]
+
+[node name="wall-half" instance=ExtResource("1_frf0d")]

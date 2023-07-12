@@ -1,16 +1,19 @@
-[gd_scene load_steps=9 format=3 uid="uid://620a76hf83kf"]
+[gd_scene load_steps=10 format=3 uid="uid://620a76hf83kf"]
 
 [ext_resource type="PackedScene" uid="uid://d0byia04yeqh0" path="res://scenes/characters/character_base.tscn" id="1_0nte4"]
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="2_3cpj0"]
 [ext_resource type="ArrayMesh" uid="uid://dv2ikgwiy8qs0" path="res://assets/meshes/characters/orc/character-orc_mesh.res" id="2_eoids"]
 [ext_resource type="ArrayMesh" uid="uid://s0vnlrn6sh3w" path="res://assets/meshes/characters/orc/character-orc_Mesh arm-left Instance.res" id="3_p865a"]
+[ext_resource type="AudioStream" uid="uid://bq5sgwwsgppov" path="res://assets/sounds/dialog/orc death.wav" id="3_q1r48"]
 [ext_resource type="ArrayMesh" uid="uid://c8po0ygjgc6qe" path="res://assets/meshes/characters/orc/character-orc_Mesh arm-right Instance.res" id="4_fvwa6"]
 [ext_resource type="ArrayMesh" uid="uid://bb0qp4et3u0bt" path="res://assets/meshes/characters/orc/character-orc_Mesh leg-left (reverse) Instance.res" id="5_h8upl"]
 [ext_resource type="ArrayMesh" uid="uid://c7bb5ynf4wwq3" path="res://assets/meshes/characters/orc/character-orc_Mesh leg-right (reverse) Instance.res" id="6_8q643"]
 [ext_resource type="ArrayMesh" uid="uid://buuw43sgj13p5" path="res://assets/meshes/characters/orc/character-orc_mesh2.res" id="7_ood0r"]
 
 [node name="Enemy" groups=["Enemies"] instance=ExtResource("1_0nte4")]
+collision_layer = 4
 script = ExtResource("2_3cpj0")
+deathSound = ExtResource("3_q1r48")
 
 [node name="body" parent="Pivot" index="0"]
 mesh = ExtResource("2_eoids")
@@ -20,6 +23,10 @@ mesh = ExtResource("3_p865a")
 
 [node name="arm-right" parent="Pivot/body" index="1"]
 mesh = ExtResource("4_fvwa6")
+
+[node name="hit-detection" parent="Pivot/body/arm-right" index="0"]
+collision_layer = 4
+collision_mask = 2
 
 [node name="leg-left" parent="Pivot/body" index="2"]
 mesh = ExtResource("5_h8upl")

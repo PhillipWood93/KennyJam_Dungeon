@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://d0byia04yeqh0"]
+[gd_scene load_steps=25 format=3 uid="uid://d0byia04yeqh0"]
 
 [ext_resource type="ArrayMesh" uid="uid://cd44xoijfk4gg" path="res://assets/meshes/characters/human/character-human_mesh.res" id="1_m6l36"]
 [ext_resource type="Script" path="res://scripts/character_base.gd" id="1_r4m7y"]
@@ -7,6 +7,9 @@
 [ext_resource type="ArrayMesh" uid="uid://crcj3cawyt2qr" path="res://assets/meshes/characters/human/character-human_Mesh leg-left (reverse) Instance.res" id="4_sbhrw"]
 [ext_resource type="ArrayMesh" uid="uid://ccrrue25rmyqi" path="res://assets/meshes/characters/human/character-human_Mesh leg-right (reverse) Instance.res" id="5_bwuqm"]
 [ext_resource type="ArrayMesh" uid="uid://cblrtquwxm7qm" path="res://assets/meshes/characters/human/character-human_mesh2.res" id="6_n2t2e"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_jk48c"]
+radius = 0.275059
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0el8h"]
 radius = 0.199937
@@ -230,6 +233,18 @@ tracks/17/keys = {
 "update": 0,
 "values": [Vector3(1, 1, 1)]
 }
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Pivot/body/arm-right/hit-detection:monitoring")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_ko65c"]
 resource_name = "attack"
@@ -269,6 +284,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(0, -0.349066, 0), Vector3(0, 0.261799, 0), Vector3(0, 5.96047e-08, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pivot/body/arm-right/hit-detection:monitoring")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
 }
 
 [sub_resource type="Animation" id="Animation_287xh"]
@@ -586,6 +613,8 @@ nodes/output/position = Vector2(380, 120)
 node_connections = [&"output", 0, &"DeathTransition", &"AttackTransition", 0, &"AttackAnim", &"AttackTransition", 1, &"locomotion", &"DeathTransition", 0, &"DeathAnim", &"DeathTransition", 1, &"AttackTransition"]
 
 [node name="CharacterBase" type="CharacterBody3D"]
+collision_layer = 0
+collision_mask = 9
 script = ExtResource("1_r4m7y")
 
 [node name="Pivot" type="Node3D" parent="."]
@@ -604,6 +633,15 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0998968, 0.1115, -0.0115)
 mesh = ExtResource("3_p4q6c")
 skeleton = NodePath("")
+
+[node name="hit-detection" type="Area3D" parent="Pivot/body/arm-right"]
+collision_layer = 0
+collision_mask = 0
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pivot/body/arm-right/hit-detection"]
+transform = Transform3D(0.999555, 0.0298355, 0, -0.0298355, 0.999555, 0, 0, 0, 1, 0.291947, 0.0431663, -0.143012)
+shape = SubResource("SphereShape3D_jk48c")
 
 [node name="leg-left" type="MeshInstance3D" parent="Pivot/body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.083571, 0, -2.88765e-15)
@@ -632,7 +670,6 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeBlendTree_uxm6v")
 anim_player = NodePath("../AnimationPlayer")
-active = true
 parameters/AttackTransition/current_state = "false"
 parameters/AttackTransition/transition_request = ""
 parameters/AttackTransition/current_index = 1
@@ -644,3 +681,8 @@ parameters/locomotion/blend_position = 0.0
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 path_desired_distance = 0.5
 target_desired_distance = 0.1
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+
+[connection signal="area_entered" from="Pivot/body/arm-right/hit-detection" to="." method="_on_hitdetection_area_entered"]
+[connection signal="body_entered" from="Pivot/body/arm-right/hit-detection" to="." method="_on_hitdetection_body_entered"]

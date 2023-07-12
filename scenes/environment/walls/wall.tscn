@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfaej2a2o77q5"]
+
+[ext_resource type="PackedScene" uid="uid://c4citca67517u" path="res://scenes/environment/walls/blend files/wall.blend" id="1_arc71"]
+
+[node name="wall" instance=ExtResource("1_arc71")]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5h7kf3mkg64d"]
+
+[ext_resource type="PackedScene" uid="uid://bar1huk7ra4ls" path="res://scenes/environment/floors/blend files/level_1_floor.blend" id="1_gpwxv"]
+
+[node name="level_1_floor" instance=ExtResource("1_gpwxv")]
+
+[node name="collision" parent="." index="1"]
+collision_mask = 6
