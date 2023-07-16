@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ddgin6yjn5m48"
+path="res://.godot/imported/human death.wav-ad908a089511b4a6f3b01e736ebc4b5b.sample"
+
+[deps]
+
+source_file="res://assets/sounds/dialog/human death.wav"
+dest_files=["res://.godot/imported/human death.wav-ad908a089511b4a6f3b01e736ebc4b5b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

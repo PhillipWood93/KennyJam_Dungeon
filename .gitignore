@@ -5,9 +5,6 @@
 KennyJam_Dungeon.sln
 
 #assets
-assets/
 icon.svg
 icon.svg.import
 addons/
-*.blend
-*.blend.import
